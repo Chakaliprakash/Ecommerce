@@ -1,0 +1,219 @@
+/* ---------------------------------------------------------------------
+   Auth pages — dark automotive theme, built around the McLaren hero shot.
+   Palette: near-black + ignition amber (pulled from the image's lens flare)
+   + brushed-steel grey. Sharp corners, condensed display type — dashboard/
+   gauge-cluster feel rather than a soft SaaS card.
+--------------------------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --ignition-amber: #ff7a29;
+  --ignition-amber-bright: #ffab6b;
+  --steel: #c9cdd3;
+  --steel-dim: #8a8f98;
+  --carbon: #0b0c0e;
+}
+
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  padding: 0 6vw;
+  box-sizing: border-box;
+}
+
+.auth-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(100deg, rgba(6, 7, 8, 0.94) 0%, rgba(6, 7, 8, 0.65) 42%, rgba(6, 7, 8, 0.25) 65%, rgba(6, 7, 8, 0.55) 100%),
+    linear-gradient(0deg, rgba(6, 7, 8, 0.5) 0%, rgba(6, 7, 8, 0) 30%);
+}
+
+.auth-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  background: rgba(14, 15, 17, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 122, 41, 0.22);
+  border-radius: 2px;
+  padding: 2.75rem 2.25rem 2.25rem;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.7);
+}
+
+.auth-title {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 0 0.35rem;
+  border-left: 3px solid var(--ignition-amber);
+  padding-left: 0.75rem;
+}
+
+.auth-subtitle {
+  color: var(--steel-dim);
+  font-size: 0.9rem;
+  margin: 0 0 1.75rem;
+  padding-left: 0.9rem;
+}
+
+.auth-error {
+  background: rgba(255, 76, 76, 0.12);
+  border: 1px solid rgba(255, 76, 76, 0.4);
+  color: #ff8a8a;
+  font-size: 0.85rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.auth-field label {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.auth-field input {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 2px;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.95rem;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.auth-field input::placeholder {
+  color: #55595f;
+}
+
+.auth-field input:focus {
+  border-color: var(--ignition-amber);
+  background: rgba(255, 122, 41, 0.06);
+}
+
+.auth-btn-primary {
+  margin-top: 0.4rem;
+  background: var(--ignition-amber);
+  color: #16110a;
+  border: none;
+  border-radius: 2px;
+  padding: 0.8rem 1rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.auth-btn-primary:hover:not(:disabled) {
+  background: var(--ignition-amber-bright);
+  box-shadow: 0 0 24px rgba(255, 122, 41, 0.35);
+}
+
+.auth-btn-primary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.auth-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0 1.25rem;
+  color: var(--steel-dim);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.auth-btn-google {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: #fff;
+  color: #1f1f1f;
+  border: none;
+  border-radius: 2px;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.auth-btn-google:hover {
+  background: #f1f1f1;
+}
+
+.auth-footer-text {
+  text-align: center;
+  color: var(--steel-dim);
+  font-size: 0.85rem;
+  margin: 1.75rem 0 0;
+}
+
+.auth-footer-text a {
+  color: var(--ignition-amber);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-footer-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .auth-page {
+    justify-content: center;
+    padding: 0 1.25rem;
+  }
+  .auth-card {
+    max-width: 100%;
+  }
+}
