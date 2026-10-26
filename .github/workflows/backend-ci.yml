@@ -1,0 +1,48 @@
+name: Backend CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Ecomerce Backend/**'
+      - '.github/workflows/backend-ci.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'Ecomerce Backend/**'
+      - '.github/workflows/backend-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ecommerce-backend-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Ecomerce Backend
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+          cache-dependency-path: 'Ecomerce Backend/pom.xml'
+
+      - name: Build and test
+        run: |
+          if [ -f ./mvnw ]; then
+            chmod +x ./mvnw
+            ./mvnw -B verify
+          else
+            mvn -B verify
+          fi
