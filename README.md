@@ -14,28 +14,54 @@
 
 # E-commerce Application
 
-A full-stack e-commerce project with separate frontend and backend applications.
+A full-stack shopping application with a React frontend and a Spring Boot REST API.
 
-## Project Structure
+## Features
 
-- `Ecomerce Frontend/` — frontend application.
-- `Ecomerce Backend/` — backend application.
+- User registration and login.
+- Product listing and product details.
+- Product creation and updates, including image uploads.
+- Shopping cart and checkout interface.
+- JWT-based authentication and secured backend routes.
 
-## Tech Stack
+## Architecture
 
-The repository contains a frontend application and a Spring/Maven backend. Check each component's configuration for exact versions and dependencies.
+```text
+React + Vite → Spring Boot REST API → Spring Data JPA → MySQL
+```
 
-## Getting Started
+## Technology Stack
 
-1. Clone the repository.
-2. Install frontend dependencies in the frontend directory.
-3. Configure the backend database and API settings.
-4. Run the backend using its Maven Wrapper.
-5. Start the frontend using the scripts in its package configuration.
+- Java 21 and Spring Boot
+- Spring Security and JWT
+- Spring Data JPA and MySQL
+- React, Vite, Axios, and Bootstrap
+- GitHub Actions for frontend and backend CI workflows
+
+## Run Locally
+
+### Backend
+
+```bash
+cd "Ecomerce Backend"
+./mvnw spring-boot:run
+```
+
+Configure the MySQL database and required application settings before starting the backend. On Windows, use `mvnw.cmd spring-boot:run`.
+
+### Frontend
+
+```bash
+cd "Ecomerce Frontend"
+npm install
+npm run dev
+```
+
+Configure the frontend API base URL to match the backend address.
 
 ## Security
 
-Keep credentials and environment-specific settings out of source control.
+Use unique local credentials and a strong JWT signing secret. Do not commit production credentials or real secrets.
 
 ## Author
 
