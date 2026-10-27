@@ -1,12 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&height=190&color=0:111827,50:7c3aed,100:c084fc&text=E-commerce%20Application&fontColor=ffffff&fontSize=40&fontAlignY=42&desc=React%20%7C%20Spring%20%7C%20Maven&descAlignY=65&descSize=15" width="100%" alt="E-commerce Application banner"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&height=195&color=0:111827,50:7c3aed,100:c084fc&text=E-commerce&fontColor=ffffff&fontSize=40&fontAlignY=40&desc=Full-Stack%20Shopping%20Application%20%7C%20Frontend%20%2B%20Backend&descAlignY=64&descSize=15" width="100%" alt="E-commerce banner"/>
 
-![Frontend](https://img.shields.io/badge/Frontend-Enabled-334155)
-![Backend](https://img.shields.io/badge/Backend-Project-0f766e)
-![E-commerce](https://img.shields.io/badge/E-commerce-Built%20with%20care-64748b)
-
-**Full-stack shopping application.**
+![Frontend](https://img.shields.io/badge/Frontend-React-61DAFB?style=for-the-badge)
+![Backend](https://img.shields.io/badge/Backend-Spring%20%2F%20Maven-6DB33F?style=for-the-badge)
+![Project](https://img.shields.io/badge/Project-E-commerce-7c3aed?style=for-the-badge)
 
 [Repository](https://github.com/Chakaliprakash/Ecommerce) · [Issues](https://github.com/Chakaliprakash/Ecommerce/issues)
 
