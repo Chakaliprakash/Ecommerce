@@ -14,37 +14,29 @@
 
 # E-commerce Application
 
-A full-stack e-commerce project organized into separate frontend and backend components.
+A full-stack e-commerce project with separate frontend and backend applications.
 
-## Components
+## Project Structure
 
-- **Frontend:** `Ecomerce Frontend/`
-- **Backend:** `Ecomerce Backend/`
+- `Ecomerce Frontend/` — frontend application.
+- `Ecomerce Backend/` — backend application.
 
-## Tech stack
+## Tech Stack
 
-The repository contains a frontend application and a Spring/Maven backend. Check each component's package manifest and Maven configuration for exact framework and runtime versions.
+The repository contains a frontend application and a Spring/Maven backend. Check each component's configuration for exact versions and dependencies.
 
-## Getting started
+## Getting Started
 
 1. Clone the repository.
-2. Install frontend dependencies from the frontend directory using the package manager and lockfile provided there.
-3. Build and run the backend from the backend directory using its Maven Wrapper.
-4. Configure API URLs, database settings, and other environment-specific values locally.
-5. Start each component following its own development configuration.
+2. Install frontend dependencies in the frontend directory.
+3. Configure the backend database and API settings.
+4. Run the backend using its Maven Wrapper.
+5. Start the frontend using the scripts in its package configuration.
 
 ## Security
 
-Keep passwords, database credentials, API keys, and production environment files out of Git. Use environment variables and deployment secrets.
+Keep credentials and environment-specific settings out of source control.
 
-## Repository structure
+## Author
 
-```text
-Ecommerce/
-├── Ecomerce Frontend/
-└── Ecomerce Backend/
-```
-
-## Repository
-
-[View source code](https://github.com/Chakaliprakash/Ecommerce)
+[Prakash Chakali](https://github.com/Chakaliprakash)
